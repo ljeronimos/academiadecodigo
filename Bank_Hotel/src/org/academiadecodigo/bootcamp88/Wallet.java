@@ -15,10 +15,13 @@ public class Wallet{
     public double getBalance(){
         return balance;
     }
-    //SETTER
-    public void setBalance(double money){
+
+    public boolean withdrawalWallet(double money){
+        this.balance -=money;
+        return true;
+    }
+    public void addToWallet(double money){
         this.balance += money;
     }
-
 
 }

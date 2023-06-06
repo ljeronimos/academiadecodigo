@@ -5,17 +5,21 @@ import java.util.regex.Pattern;
 
 public class Hotel {
 
-    private int numRoom;
-    private Room[] rooms;
-    public Hotel(int numRoom){
-        this.numRoom = numRoom;
+    //Hotel properties
+    private int numberOfRooms;
+    private Room[] roomsArray;
 
-        rooms = new Room[numRoom];
+    //CONSTRUCTOR
+    public Hotel(int numRoom){
+        this.numberOfRooms = numRoom;
+        this.roomsArray = new Room[numRoom];
         for(int i = 0; i < numRoom; i++){
-            rooms[i] = new Room(i + 1);
+            roomsArray[i] = new Room(i + 1);
         }
     }
 
+    //METHODS
+    //Launches hotel menu
     public void sleepOut(User user1, Scanner myScanner){
 
         boolean doneHotel=false;
@@ -31,7 +35,6 @@ public class Hotel {
                             System.out.println("You are already a guest. Cannot do check-in.");
                             break;
                         }
-                        //System.out.println("You chose checkIn");
                         System.out.println("What type of room would you like?\n[1] Single 50€\n[2] Double 70€\n[3] Suite 100€\n[4] Suite Master 200€\n[0] Quit");
                         String userInput2 = myScanner.nextLine();
                         if(Pattern.matches("^[0-4]*$", userInput2)) {
@@ -53,7 +56,6 @@ public class Hotel {
                                     break;
                                 case 4:
                                     if(this.checkin(user1,RoomType.SUITEMASTER)) {
-
                                         doneHotel = true;
                                     }
                                     break;
@@ -68,10 +70,8 @@ public class Hotel {
                         }
                         break;
                     case 2:
-
-                        if(user1.getWallet().getBalance()>=user1.getRoomTaken().getRoomPrice()) {
+                        if(user1.payService(this.roomsArray[user1.getRoomNumber()-1].getRoomPrice())) {
                             this.checkout(user1);
-                            user1.getWallet().setBalance(user1.getRoomTaken().getRoomPrice());
                         }
                         else
                             System.out.println("Go to work, malandro!");
@@ -94,39 +94,44 @@ public class Hotel {
 
     }
 
+    //Check in user
     public boolean checkin(User user, RoomType roomType) {
         if (user.getIsAGuest()) {
             System.out.println("You are already a guest. Cannot do check-in.");
         } else {
-            for (int i = 0; i < this.numRoom; i++) {
-                if (!rooms[i].getIsOccupied() && rooms[i].getTypeRoom()==roomType) {
+            for (int i = 0; i < this.numberOfRooms; i++) {
+                if (!roomsArray[i].getIsOccupied() && roomsArray[i].getTypeRoom()==roomType) {
 
-                    user.setRoomGuest(rooms[i], true);
-                    rooms[i].setOccupied(true);
-                    System.out.println("Your room number is: " + rooms[i].getRoomNumber());
+                    user.setRoomNumber(roomsArray[i].getRoomNumber());
+                    user.setIsAGuest(true);
+                    roomsArray[i].setOccupied(true);
+                    System.out.println("Your room number is: " + roomsArray[i].getRoomNumber());
                     return true;
                 }
             }
-            System.out.println("We dont have "+roomType+" available");
+            System.out.println("We don't have "+roomType+" available");
         }
         return false;
     }
 
+    //Check out user
     public void checkout(User user){
         if(!user.getIsAGuest()){
             System.out.println("You are not a guest, cannot do check-out");
         } else {
-            user.getRoomTaken().setOccupied(false);
+            this.roomsArray[user.getRoomNumber()-1].setOccupied(false);
             user.setIsAGuest(false);
+            user.setRoomNumber(0);
 
             System.out.println("Thank you, come again");
         }
     }
 
+    //Prints all rooms showing their status and type
     public void roomStatus(){
         System.out.println("{");
-        for(int i=0;i<this.numRoom;i++){
-            System.out.println(rooms[i].getRoomNumber()+" is a "+rooms[i].getTypeRoom()+" and is "+(rooms[i].getIsOccupied()? "Occupied":"Free"));
+        for(int i = 0; i<this.numberOfRooms; i++){
+            System.out.println(roomsArray[i].getRoomNumber()+" is a "+ roomsArray[i].getTypeRoom()+" and is "+(roomsArray[i].getIsOccupied()? "Occupied":"Free"));
         }
         System.out.println("}");
     }

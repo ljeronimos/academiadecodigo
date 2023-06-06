@@ -1,30 +1,34 @@
 package org.academiadecodigo.bootcamp88;
 
-import java.util.Random;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String [] args) {
 
-
-        User user1 = new User("Luis",Math.round((Math.random()*10000)*100.0)/100.0);
-        Bank bankAccount1 = user1.createBankAccount(user1.getWallet().getBalance());
-        Restaurant restaurant = new Restaurant();
-
-        Hotel hotel = new Hotel(5);
+        //Program flags, variables and utilities
         Scanner myScanner = new Scanner(System.in);
+        boolean quitMain=false;
 
-        boolean quitBank=false;
+        //Create User with random amount of money in wallet
+        User user1 = new User("Luis",(Math.random()*10000),myScanner);
+        //Create user's bank account with all the money in the wallet
+        Bank bankAccount1 = user1.createBankAccount(user1.getWalletBalance());
 
-        while (!quitBank) {
+        //Create Services
+        Restaurant restaurant = new Restaurant();
+        Hotel hotel = new Hotel(5);
+
+
+
+        while (!quitMain) {
             System.out.println("Welcome " + user1.getName() + " what would you like to do?\n[W] Withdraw from bank\n[D] Deposit to bank\n[C] Check financials\n[R] Go to restaurant\n[H] Go to Hotel\n[Q] Quit");
             String userInput = myScanner.nextLine().toLowerCase();
 
             if(Pattern.matches("[a-zA-Z]", userInput)) {
                 switch (userInput) {
                     case "w":
-                        user1.withdrawalMoney(bankAccount1);
+                        user1.withdrawMoney(bankAccount1);
                         break;
                     case "d":
                         user1.depositMoney(bankAccount1);
@@ -39,7 +43,7 @@ public class Main {
                         user1.goToHotel(hotel);
                         break;
                     case "q":
-                        quitBank = true;
+                        quitMain = true;
                         break;
                     default:
                         System.out.println("Option not available.");
@@ -51,7 +55,7 @@ public class Main {
         }
 
 
-        user1.myScanner.close();
+        //user1.myScanner.close();
         myScanner.close();
 
 

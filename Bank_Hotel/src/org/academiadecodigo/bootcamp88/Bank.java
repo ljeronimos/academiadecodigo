@@ -10,11 +10,10 @@ public class Bank {
     //CONSTRUCTOR - takes in money
     public Bank(User user1, double money){
         this.balance = money;
-
-        System.out.println("User "+user1.getName()+" has a bank account with "+this.checkBalance()+"€.");
+        System.out.println("User "+user1.getName()+" has a bank account with "+Math.round(this.getBalance()*100.0)/100.0+"€.");
     }
     //GETTER
-    public double checkBalance(){
+    public double getBalance(){
         return this.balance;
     }
 
