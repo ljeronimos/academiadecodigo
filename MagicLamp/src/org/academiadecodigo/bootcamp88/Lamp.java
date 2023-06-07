@@ -7,6 +7,7 @@ public class Lamp {
 
     private Genie[] lampOfGenies;
     private int lampSize;
+    private int resetTimes;
     private boolean demonExists;
     private int currentCycle;
     private DemonGenie demonGenie;
@@ -16,6 +17,23 @@ public class Lamp {
         this.lampSize = lampSize;
         this.demonExists=false;
         this.currentCycle=0;
+        this.resetTimes=0;
+    }
+
+    public int getLampSize(){
+        return lampSize;
+    }
+
+    public int getRemainingWishesInLamp(){
+        int wishes=0;
+        for(int i=0; i<currentCycle;i++){
+            wishes += lampOfGenies[i].getWishesLeft();
+        }
+        return wishes;
+    }
+
+    public int getResetTimes(){
+        return resetTimes;
     }
 
     public void createGenie(int genieIndex, int numRubs){
@@ -50,6 +68,7 @@ public class Lamp {
         this.demonExists=false;
         this.currentCycle=0;
         this.demonGenie=null;
+        this.resetTimes++;
     }
     public void checkLamp(){
         for (int i=0;i<this.lampSize;i++){

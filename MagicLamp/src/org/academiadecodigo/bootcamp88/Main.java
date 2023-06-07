@@ -19,7 +19,7 @@ public class Main {
         Scanner myScanner = new Scanner(System.in);
 
         while(!finished){
-            System.out.println("[R] Rub lamp \n[C] Check Lamp \n[N] Create New lamp\n[Q] Quit");
+            System.out.println("[R] Rub lamp \n[C] Check Lamps \n[N] Create New lamp\n[Q] Quit");
             String userInput = myScanner.nextLine().toLowerCase();
 
             if(Pattern.matches("[a-zA-Z]", userInput)) {
@@ -66,13 +66,18 @@ public class Main {
                                 } else if (lamp == 0) {
                                     for(int i=0;i<lampCount;i++){
                                         System.out.println("---- Lamp "+(i+1)+" ----");
+                                        System.out.println("Capacity: "+lampArray[i].getLampSize()+" Remaining wishes: "+lampArray[i].getRemainingWishesInLamp()+" Recharged times: "+lampArray[i].getResetTimes());
                                         lampArray[i].checkLamp();
                                     }
                                 } else {
+                                    System.out.println("---- Lamp "+(lamp-1)+" ----");
+                                    System.out.println("Capacity: "+lampArray[lamp-1].getLampSize()+" Remaining wishes: "+lampArray[lamp-1].getRemainingWishesInLamp()+" Recharged times: "+lampArray[lamp-1].getResetTimes());
                                     lampArray[lamp - 1].checkLamp();
                                 }
                             }
                         }else {
+                            System.out.println("---- Lamp 1 ----");
+                            System.out.println("Capacity: "+lampArray[lampCount-1].getLampSize()+" Remaining wishes: "+lampArray[lampCount-1].getRemainingWishesInLamp()+" Recharged times: "+lampArray[lampCount-1].getResetTimes());
                             lampArray[lampCount - 1].checkLamp();
                         }
                         break;
