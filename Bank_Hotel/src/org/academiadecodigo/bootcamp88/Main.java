@@ -27,27 +27,13 @@ public class Main {
 
             if(Pattern.matches("[a-zA-Z]", userInput)) {
                 switch (userInput) {
-                    case "w":
-                        user1.withdrawMoney(bankAccount1);
-                        break;
-                    case "d":
-                        user1.depositMoney(bankAccount1);
-                        break;
-                    case "c":
-                        user1.checkMoney(bankAccount1);
-                        break;
-                    case "r":
-                        user1.goToRestaurant(restaurant);
-                        break;
-                    case "h":
-                        user1.goToHotel(hotel);
-                        break;
-                    case "q":
-                        quitMain = true;
-                        break;
-                    default:
-                        System.out.println("Option not available.");
-                        break;
+                    case "w" -> user1.withdrawMoney(bankAccount1);
+                    case "d" -> user1.depositMoney(bankAccount1);
+                    case "c" -> user1.checkMoney(bankAccount1);
+                    case "r" -> user1.goToRestaurant(restaurant);
+                    case "h" -> user1.goToHotel(hotel);
+                    case "q" -> quitMain = true;
+                    default -> System.out.println("Option not available.");
                 }
             }else{
                 System.out.println("Invalid option. Try again.");

@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 public class Hotel {
 
     //Hotel properties
-    private int numberOfRooms;
-    private Room[] roomsArray;
+    private final int numberOfRooms;
+    private final Room[] roomsArray;
 
     //CONSTRUCTOR
     public Hotel(int numRoom){

@@ -7,8 +7,8 @@ import java.util.regex.Pattern;
 public class User {
 
     //User properties
-    private String name;
-    private Wallet wallet1;
+    private final String name;
+    private final Wallet wallet1;
     private boolean isAGuest;
     private int roomNumber;
 
