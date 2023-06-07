@@ -7,7 +7,7 @@ public class DemonGenie extends Genie{
     }
 
     public boolean grantWish(){
-        System.out.println("Wish granted!");
+        System.out.println("*****Wish granted by Demon Genie!*****");
         return true;
     }
 }
