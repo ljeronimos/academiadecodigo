@@ -28,30 +28,18 @@ abstract public class Car {
         this.crashed = true;
     }
     public boolean isCrashed() {
-
         return crashed;
     }
-
     public void setPos(Position pos){
         this.pos = pos;
     }
-
     public int getStepsCount(){
         return stepsCount;
     }
-    public Direction getCarDirection(){
-        return carDirection;
-    }
-    public void resetStepsCount(){
-        this.stepsCount=0;
-    }
+    public Direction getCarDirection(){return carDirection;}
+    public Position getPosition(){return pos;}
+    public void incrementStepsCount(){this.stepsCount++;}
 
-    public void setCarType(CarType type){
-        this.carType = type;
-    }
-    public void setCrashed(boolean crashed){
-        this.crashed = crashed;
-    }
 
     public boolean hitsWall(){
 
@@ -69,7 +57,6 @@ abstract public class Car {
     }
 
     public void move(){
-
         if(carDirection==Direction.UP){
             pos.setRow(pos.getRow()-1);
         } else if (carDirection == Direction.DOWN) {
@@ -79,8 +66,7 @@ abstract public class Car {
         } else if (carDirection == Direction.RIGHT) {
             pos.setCol(pos.getCol()+1);
         }
-
-        stepsCount++;
+        incrementStepsCount();
     }
 
     public void newDirection(){

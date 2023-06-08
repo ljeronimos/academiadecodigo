@@ -1,8 +1,6 @@
 package org.academiadecodigo.carcrash;
 
-import org.academiadecodigo.carcrash.cars.Car;
-import org.academiadecodigo.carcrash.cars.CarFactory;
-import org.academiadecodigo.carcrash.cars.Direction;
+import org.academiadecodigo.carcrash.cars.*;
 import org.academiadecodigo.carcrash.field.Field;
 
 public class Game {
@@ -50,6 +48,9 @@ public class Game {
 
             // Move all cars
             moveAllCars();
+            /*moveMustang();
+            moveMustang();
+            moveFiat();*/
 
             // Update screen
             Field.draw(cars);
@@ -58,19 +59,14 @@ public class Game {
 
     }
 
-    private boolean checkCarCrash(int carIndex){
+    private void checkCarCrash(int carIndex){
 
         for(int i = 0; i < cars.length; i++){
             if(carIndex!=i && cars[carIndex].getPos().getRow()==cars[i].getPos().getRow() && cars[carIndex].getPos().getCol()==cars[i].getPos().getCol()){
                 cars[carIndex].crashed();
                 cars[i].crashed();
-
-                /*if (cars[carIndex].getCarDirection()== Direction.DOWN && cars[i].getCarDirection()==Direction.UP){
-                    cars[carIndex].crashed();
-                }*/
             }
         }
-        return true;
     }
     private void moveAllCars() {
 
@@ -80,14 +76,49 @@ public class Game {
                 while (cars[i].hitsWall())
                     cars[i].newDirection();
 
+                //Gets a new direction if it has taken the max number of steps in the same direction
                 if (cars[i].getStepsCount() == Car.MAX_STEPS) {
                     cars[i].newDirection();
-                    //cars[i].resetStepsCount();
                 }
                 cars[i].move();
                 checkCarCrash(i);
             }
+        }
+    }
 
+    private void moveFiat(){
+
+        for (int i = 0; (i < cars.length && (cars[i] instanceof Fiat)); i++) {
+
+            if(!cars[i].isCrashed()) {
+                while (cars[i].hitsWall())
+                    cars[i].newDirection();
+
+                //Gets a new direction if it has taken the max number of steps in the same direction
+                if (cars[i].getStepsCount() == Car.MAX_STEPS) {
+                    cars[i].newDirection();
+                }
+                cars[i].move();
+                checkCarCrash(i);
+            }
+        }
+    }
+
+    private void moveMustang(){
+
+        for (int i = 0; (i < cars.length && (cars[i] instanceof Mustang)); i++) {
+
+            if(!cars[i].isCrashed()) {
+                while (cars[i].hitsWall())
+                    cars[i].newDirection();
+
+                //Gets a new direction if it has taken the max number of steps in the same direction
+                if (cars[i].getStepsCount() == Car.MAX_STEPS) {
+                    cars[i].newDirection();
+                }
+                cars[i].move();
+                checkCarCrash(i);
+            }
         }
     }
 
