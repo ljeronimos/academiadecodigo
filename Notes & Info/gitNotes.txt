@@ -1,0 +1,10 @@
+
+
+#Remove cached file from commit (Useful when adding files to .gitignore) (without <>)
+Git rm --cached <FILE_NAME>
+
+#Delete GitHub credentials (to then use new ones - user and token)
+Git credential-osxkeychain erase
+host=github.com
+protocol=https
+
