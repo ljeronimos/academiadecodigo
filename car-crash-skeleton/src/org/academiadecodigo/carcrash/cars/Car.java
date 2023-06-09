@@ -18,6 +18,7 @@ abstract public class Car {
         this.crashed = false;
         this.stepsCount = 0;
         this.carDirection = Direction.values()[(int) (Math.random() * Direction.values().length)];
+        this.pos = new Position((int)(Math.random()*Field.getWidth()),(int)(Math.random()*Field.getHeight()));
     }
     public Position getPos() {
         return pos;
@@ -30,14 +31,9 @@ abstract public class Car {
     public boolean isCrashed() {
         return crashed;
     }
-    public void setPos(Position pos){
-        this.pos = pos;
-    }
     public int getStepsCount(){
         return stepsCount;
     }
-    public Direction getCarDirection(){return carDirection;}
-    public Position getPosition(){return pos;}
     public void incrementStepsCount(){this.stepsCount++;}
 
 

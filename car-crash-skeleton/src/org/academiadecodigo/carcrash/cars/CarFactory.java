@@ -7,19 +7,10 @@ public class CarFactory {
 
     public static Car getNewCar() {
 
-        Car createdCar;
-
         if(Math.random()<0.5){
-            createdCar = new Fiat();
+            return new Fiat();
         }else{
-            createdCar = new Mustang();
+            return new Mustang();
         }
-
-        Position pos = new Position((int)(Math.random()*Field.getWidth()),(int)(Math.random()*Field.getHeight()));
-
-        createdCar.setPos(pos);
-
-        return createdCar;
-
     }
 }
