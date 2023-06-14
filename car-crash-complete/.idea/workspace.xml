@@ -6,10 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4bf9ff22-53e9-4977-b511-a7ccfa4337dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/CarFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/CarFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/CarType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/CarType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/Direction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/Fiat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/Fiat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/Mustang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/cars/Mustang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/field/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/field/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/field/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/field/Position.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/cars/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/cars/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/cars/CarFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/cars/CarFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/cars/Fiat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/cars/Fiat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/carcrash/field/Field.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +40,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/luis/Desktop/AC/myRepo (git inside)/academiadecodigo/car-crash-skeleton&quot;
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/codecadet/Desktop/exercises/myRepo/car-crash-complete&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -42,7 +52,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686256603126</updated>
+      <workItem from="1686726939896" duration="10150000" />
+      <workItem from="1686740836042" duration="2452000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

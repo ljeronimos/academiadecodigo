@@ -18,7 +18,7 @@ abstract public class Car {
         this.crashed = false;
         this.stepsCount = 0;
         this.carDirection = Direction.values()[(int) (Math.random() * Direction.values().length)];
-        this.pos = new Position((int)(Math.random()*Field.getWidth()),(int)(Math.random()*Field.getHeight()));
+        this.pos = new Position((int)(Math.random()*Field.getWidth()-1),(int)(Math.random()*Field.getHeight()-1));
     }
     public Position getPos() {
         return pos;
@@ -39,13 +39,13 @@ abstract public class Car {
 
     public boolean hitsWall(){
 
-        if(carDirection==Direction.UP && pos.getRow()-MAX_STEPS<0){
+        if(carDirection==Direction.UP && pos.getRow()-1<0){
             return true;
-        }else if(carDirection==Direction.DOWN && pos.getRow()+MAX_STEPS> Field.getHeight()){
+        }else if(carDirection==Direction.DOWN && pos.getRow()+1> Field.getHeight()-1){
             return true;
-        }else if(carDirection==Direction.LEFT && pos.getCol()-MAX_STEPS<0){
+        }else if(carDirection==Direction.LEFT && pos.getCol()-1<0){
             return true;
-        } else if (carDirection==Direction.RIGHT && pos.getCol()+MAX_STEPS>Field.getWidth()) {
+        } else if (carDirection==Direction.RIGHT && pos.getCol()+1>Field.getWidth()-1) {
             return true;
         }else {
             return false;
@@ -54,15 +54,38 @@ abstract public class Car {
 
     public void move(){
         if(carDirection==Direction.UP){
-            pos.setRow(pos.getRow()-1);
+            if(!hitsWall()){
+                pos.setRow(pos.getRow()-1);
+                incrementStepsCount();
+            }else{
+                newDirection();
+                move();
+            }
         } else if (carDirection == Direction.DOWN) {
-            pos.setRow(pos.getRow()+1);
+            if(!hitsWall()){
+                pos.setRow(pos.getRow()+1);
+                incrementStepsCount();
+            }else{
+                newDirection();
+                move();
+            }
         } else if (carDirection == Direction.LEFT) {
-            pos.setCol(pos.getCol()-1);
+            if(!hitsWall()){
+                pos.setCol(pos.getCol()-1);
+                incrementStepsCount();
+            }else{
+                newDirection();
+                move();
+            }
         } else if (carDirection == Direction.RIGHT) {
-            pos.setCol(pos.getCol()+1);
+            if(!hitsWall()){
+                pos.setCol(pos.getCol()+1);
+                incrementStepsCount();
+            }else{
+                newDirection();
+                move();
+            }
         }
-        incrementStepsCount();
     }
 
     public void newDirection(){

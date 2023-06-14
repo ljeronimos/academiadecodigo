@@ -70,6 +70,10 @@ public final class Field {
 
     }
 
+    public static void clearScreen(){
+        screen.clear();
+    }
+
     public static int getWidth() {
         return width;
     }

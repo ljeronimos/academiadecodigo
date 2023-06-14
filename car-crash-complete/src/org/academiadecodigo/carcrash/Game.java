@@ -51,11 +51,13 @@ public class Game {
 
             // Checks if all cars are crashed
             if(areAllCrashed()){
-
+                Field.clearScreen();
+            }else{
+                // Update screen
+                Field.draw(cars);
             }
 
-            // Update screen
-            Field.draw(cars);
+
 
         }
     }
@@ -86,8 +88,6 @@ public class Game {
         for (int i = 0; i < cars.length; i++) {
 
             if(!cars[i].isCrashed()) {
-                while (cars[i].hitsWall())
-                    cars[i].newDirection();
 
                 //Gets a new direction if it has taken the max number of steps in the same direction
                 if (cars[i].getStepsCount() >= Car.MAX_STEPS) {
