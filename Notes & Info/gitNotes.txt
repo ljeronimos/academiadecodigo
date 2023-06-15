@@ -8,3 +8,8 @@ Git credential-osxkeychain erase
 host=github.com
 protocol=https
 
+#Initialize git repository
+git init
+
+#Check git status
+git status

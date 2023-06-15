@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bf9ff22-53e9-4977-b511-a7ccfa4337dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SimpleGraphicsTest/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Notes &amp; Info/gitNotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Notes &amp; Info/gitNotes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleGraphicsTest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleGraphicsTest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleGraphicsTest/out/production/SimpleGraphicsTest/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleGraphicsTest/out/production/SimpleGraphicsTest/Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleGraphicsTest/out/production/SimpleGraphicsTest/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleGraphicsTest/out/production/SimpleGraphicsTest/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleGraphicsTest/out/production/SimpleGraphicsTest/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleGraphicsTest/src/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleGraphicsTest/src/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleGraphicsTest/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleGraphicsTest/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleGraphicsTest/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleGraphicsTest/src/Target.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../car-crash-experiments/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../car-crash-experiments/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../car-crash-experiments/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../car-crash-experiments/out/production/car-crash-skeleton/org/academiadecodigo/carcrash/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/codecadet/Desktop/exercises/myRepo/car-crash-complete&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/luis/Desktop/AC/myRepo (git inside)/academiadecodigo/car-crash-complete"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

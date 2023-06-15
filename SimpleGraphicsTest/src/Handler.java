@@ -1,4 +1,3 @@
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -7,11 +6,11 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 public class Handler implements KeyboardHandler {
 
     public Keyboard keyboard;
-    public Player player;
+    public Target target;
 
 
-    public Handler(Player player){
-        this.player=player;
+    public Handler(Target target){
+        this.target = target;
         this.keyboard = new Keyboard(this);
         createKeyboardEvents();
     }
@@ -48,16 +47,16 @@ public class Handler implements KeyboardHandler {
 
         switch (keyboardEvent.getKey()){
             case KeyboardEvent.KEY_RIGHT:
-                player.moveRight();
+                target.moveRight();
                 break;
             case KeyboardEvent.KEY_LEFT:
-                player.moveLeft();
+                target.moveLeft();
                 break;
             case KeyboardEvent.KEY_UP:
-                player.moveUp();
+                target.moveUp();
                 break;
             case KeyboardEvent.KEY_DOWN:
-                player.moveDown();
+                target.moveDown();
                 break;
             case KeyboardEvent.KEY_SPACE:
                 System.exit(1);
