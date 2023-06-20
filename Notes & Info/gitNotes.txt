@@ -1,4 +1,6 @@
 
+#Man for command
+git help <command>
 
 #Remove cached file from commit (Useful when adding files to .gitignore) (without <>)
 Git rm --cached <FILE_NAME>
@@ -14,4 +16,20 @@ git init
 #Check git status
 git status
 
-#
+#Add FILE_NAME
+git add <FILE_NAME>
+
+#Move to BRANCH or COMMIT_ID
+git checkout <BRANCH/COMMIT_ID>
+
+#Create new branch "BRANCH_NAME"
+git checkout -B <BRANCH_NAME>
+
+#Create new branch (without <>)
+git branch <BRANCH_NAME> 
+
+#Merge current branch with BRANCH
+git merge <BRANCH>
+
+
+

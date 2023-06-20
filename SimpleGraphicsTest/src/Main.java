@@ -10,7 +10,7 @@ public class Main {
 
         final int SCREEN_WIDTH=1280;
         final int SCREEN_HEIGHT=720;
-        final int DELAY=100;
+        final int DELAY=50;
 
         Game g = new Game(SCREEN_WIDTH,SCREEN_HEIGHT,DELAY);
 

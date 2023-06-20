@@ -8,6 +8,7 @@ public class Game {
     public static int screenHeight;
     private int delay;
     private Picture rubberDuck;
+    private Picture aim;
     private Target target;
 
     public Game(int screenWidth, int screenHeight, int delay){
@@ -24,15 +25,21 @@ public class Game {
         background.setColor(Color.DARK_GRAY);
         background.fill();
 
-        rubberDuck = new Picture(0,0,"/home/luis/Desktop/AC/myRepo (git inside)/academiadecodigo/SimpleGraphicsTest/Resources/kisspng-rubber-duck-clip-art-5ad8820ae62835.6217414815241385069427.png");
+        rubberDuck = new Picture(0,0,"Resources/kisspng-rubber-duck-clip-art-5ad8820ae62835.6217414815241385069427.png");
         rubberDuck.grow(-903,-700);
         rubberDuck.translate(-600,-400);
+
+        aim = new Picture(screenWidth/2,screenHeight/2,"Resources/Aim-PNG-HD-Image.png");
+        aim.grow(-310,-310);
+
+        aim.draw();
 
         target = new Target(rubberDuck);
 
         target.draw();
 
         new Handler(target);
+        new Handler(aim);
 
     }
 

@@ -2,6 +2,10 @@ import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
+import org.academiadecodigo.simplegraphics.mouse.Mouse;
+import org.academiadecodigo.simplegraphics.mouse.MouseEvent;
+import org.academiadecodigo.simplegraphics.mouse.MouseHandler;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Handler implements KeyboardHandler {
 
@@ -13,6 +17,11 @@ public class Handler implements KeyboardHandler {
         this.target = target;
         this.keyboard = new Keyboard(this);
         createKeyboardEvents();
+    }
+
+    public Handler(Picture picture){
+
+
     }
 
     public void createKeyboardEvents(){
@@ -42,6 +51,7 @@ public class Handler implements KeyboardHandler {
         keyboard.addEventListener(keyboardEventSpace);
     }
 
+
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
 
@@ -70,4 +80,5 @@ public class Handler implements KeyboardHandler {
     public void keyReleased(KeyboardEvent keyboardEvent) {
 
     }
+
 }

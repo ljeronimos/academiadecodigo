@@ -4,7 +4,7 @@ public class Target {
 
     private Picture target;
     private int stepsCount;
-    public static final int MAX_STEPS=5;
+    public static final int MAX_STEPS=10;
     private Directions direction;
 
     public Target(Picture target){
@@ -98,15 +98,32 @@ public class Target {
             newDirection();
 
         switch (direction) {
-            case NORTH -> moveUp();
-            case NORTHEAST -> moveUpRight();
-            case EAST -> moveRight();
-            case SOUTHEAST -> moveDownRight();
-            case SOUTH -> moveDown();
-            case SOUTHWEST -> moveDownLeft();
-            case WEST -> moveLeft();
-            case NORTHWEST -> moveUpLeft();
-            default -> throw new IllegalStateException("Unexpected value: " + direction);
+            case NORTH:
+                moveUp();
+                break;
+            case NORTHEAST:
+                moveUpRight();
+                break;
+            case EAST:
+                moveRight();
+                break;
+            case SOUTHEAST:
+                moveDownRight();
+                break;
+            case SOUTH:
+                moveDown();
+                break;
+            case SOUTHWEST:
+                moveDownLeft();
+                break;
+            case WEST:
+                moveLeft();
+                break;
+            case NORTHWEST:
+                moveUpLeft();
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + direction);
         }
         stepsCount++;
 
